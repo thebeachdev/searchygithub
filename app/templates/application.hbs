@@ -1,0 +1,15 @@
+{{!-- app/templates/application.hbs --}}
+<!-- create search bar here.  -->
+<div class="ui grid">
+  <div class="ui four column centered grid">
+    <div class="row">
+      <h1 class="ui centered aligned header">Github User Search</h1>
+    </div>
+    <div class="ui column centered">
+      <form class="ui fluid action input" {{action "submitQuery" on="submit"}}>
+        {{input value=query class="prompt" type="text" placeholder="Enter a User Name"}}
+        <div class="ui primary button"{{action "submitQuery"}}>Search</div>
+      </form>
+    </div>
+  </div>
+</div>
