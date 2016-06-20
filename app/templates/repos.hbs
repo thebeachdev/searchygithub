@@ -1,0 +1,14 @@
+{{! app/templates/repos.hbs}}
+<div class="ui four column centered grid">
+  <div class="row">
+    <h1 class="ui centered aligned header"> Githhub User Finder</h1>
+  </div>
+  <div class="row">
+    <div class="ui column centered">
+      <form class="ui fluid action input"{{action "submitQuery"on="submit"}}>
+        <div class="ui primary button"{{action "submitQuery"}}>Search</div>
+      </form>
+    </div>
+  </div>
+  {{repo-widget repos=model}}
+</div>

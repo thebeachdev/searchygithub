@@ -3,7 +3,11 @@ import attr from 'ember-data/attr';
 // import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
-  fullName: attr(),
-  language: attr(),
-  stargazersCount: attr('number')
+  name: attr('string'),
+  description: attr('string'),
+  htmlUrl: attr('string'),
+  forksCount:attr('number'),
+  stargazersCount:attr('number'),
+  watchersCount: attr('number'),
+  gitUrl:attr('string'),
 });
