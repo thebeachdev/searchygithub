@@ -1,34 +1,9 @@
 {{!-- app/templates/application.hbs --}}
 <!-- create search bar here.  -->
 <div class="ui four column centered grid">
-  <div class="row">
-    <h1 class="ui centered aligned header">Github User Search</h1>
-  </div>
-  
   <!-- User Card -->
-  <div class="ui card centered aligned ">
-    <div class="content">
-      <div class="header">{{model.login}}</div>
-      <h4 class="ui sub header">{{model.bio}}</h4>
-      <div class="ui small feed">
-        <div class="event">
-          <div class="content">
-            <div class="summary">
-              Location:{{model.location}}
-              <br>
-              Email: {{model.email}}
-              <br>
-              Link: <a>{{model.url}}</a>
-              <br>
-              Number of Followers: {{model.followers}}
-              <br>
-              Number of Public Repos: {{model.publicRepos}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {{user-card user=model}}
+  <br>
   <!-- End User Card -->
   <div class="ui container">
     <div class="ui four doubling cards">

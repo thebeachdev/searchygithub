@@ -6,8 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('user');
-  this.route('repos');
+  this.route('user', function() {
+    this.route('repos'); // user/repos
+  });
 });
 
 export default Router;

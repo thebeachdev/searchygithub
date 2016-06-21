@@ -1,1 +1,24 @@
-{{yield}}
+<div class="ui card centered aligned">
+  <div class="content">
+    <div class="header">{{user.login}}</div>
+    <h4 class="ui sub header">{{user.bio}}</h4>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+            Location: {{user.location}}
+            <br>
+            Email: {{user.email}}
+            <br>
+            Link:<a>{{user.url}}</a>
+            <br>
+            Number of Followers: {{user.followers}}
+            <br>
+            Number of Public Repos: {{user.publicRepos}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
