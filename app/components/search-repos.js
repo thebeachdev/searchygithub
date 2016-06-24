@@ -1,11 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
   acitons:{
-    submitQuery(){
+    submit(){
       const text = this.get('query');
-      this.get('searchRepos')(text);
-      this.set('text', "");
+      this.get('searchUserAndRepos')(text);
+
+      this.set('user', "");
       this.$('input').focus();
     }
   }
