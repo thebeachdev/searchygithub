@@ -6,11 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('user', function() {
-    this.route('repos'); // user/repos
+  this.route('user', function(){
+    this.route('repos');
   });
   // need to change /user-profile to "/"
 
+  this.route('search-repos');
 });
 
 export default Router;

@@ -1,9 +1,4 @@
-<div class="row">
-  <div class="ui column centered">
-    <form class="ui fluid action input" {{action "submit" on="submit"}}>
-      {{input value=query class="prompt" type="text" placeholder="Enter a User Name"}}
-      <div class="ui primary button"{{action "submit"}}>Search</div>
-    </form>
-  </div>
-</div>
-<br>
+<form {{action "submit" on="submit"}} class="ui input center aligned grid">
+  {{input value=query class="prompt" type="text" placeholder="Enter a User Name"}}
+  <div class="ui primary button"{{action "submit"}}>Search</div>
+</form>

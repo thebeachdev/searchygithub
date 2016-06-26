@@ -1,47 +1,14 @@
-{{!-- app/templates/application.hbs --}}
+{{!-- app/templates/index.hbs --}}
 <!-- create search bar here.  -->
-
-<div class="ui four column centered grid">
-  <!-- User Card -->
+<div class="ui container">
+  {{search-repos}}
+  <br>
+  <br>
+  <h1>User Profile</h1>
   {{user-card user=model}}
   <br>
-  <!-- End User Card -->
-  <div class="ui container">
-    <div class="ui four doubling cards">
-      {{#each model.repositories as |repo|}}
-      <div class="ui card">
-        <div class="content">
-          <div class="header">
-            {{repo.name}}
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">{{repo.description}}</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                    URL: <a>{{repo.htmlUrl}}</a>
-                    <br>
-                    Fork Count: {{repo.forksCount}}
-                    <br>
-                    Stargazer Count: {{repo.stargazersCount}}
-                    <br>
-                    Watcher Counter: {{repo.watchersCount}}
-                    <br>
-                    Git URL: <a>{{repo.gitUrl}}</a>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-            <!-- TODO: add the rest of the stuff here and then get the search to work -->
-          </div>
-        </div>
-      </div>
-      {{/each}}
-    </div>
-  </div>
   <br>
+  <h1>User Repos</h1>
+  <br>
+  {{repo-collection repos=model.repositories}}
 </div>
