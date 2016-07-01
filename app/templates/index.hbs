@@ -1,14 +1,27 @@
 {{!-- app/templates/index.hbs --}}
 <!-- create search bar here.  -->
-<div class="ui container">
-  {{search-repos}}
-  <br>
-  <br>
-  <h1>User Profile</h1>
-  {{user-card user=model}}
-  <br>
-  <br>
-  <h1>User Repos</h1>
-  <br>
-  {{repo-collection repos=model.repositories}}
+
+<div class="ui input center aligned grid">
+  <form {{action "submitSearch"}}>
+    {{input value=searchValue class="prompt" type="text" placeholder="Enter a User Name"}}
+    <div class="ui primary button"{{action "submit"}}>Search</div>
+  </form>
 </div>
+
+{{#if model}}
+  <div class="ui container">
+    <h1>Search Results</h1>
+      <br>
+      <br>
+    <h1>User Profile</h1>
+    {{user-card user=model}}
+      <br>
+      <br>
+    <h1>User Repos</h1>
+      <br>
+    {{repo-collection repos=model.repositories}}
+  </div>
+{{else}}
+  <h1>There is no Model Present</h1>
+  {{!-- load error card here --}}
+{{/if}}
