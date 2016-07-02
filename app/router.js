@@ -7,10 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   // need to change /user-profile to "/"
-  this.route('search', function() {
-    this.route('users');
-    this.route('repositories');
-  });
+  // this.route('search', function() {
+  //   this.route('users');
+  //   this.route('repositories');
+  // });
 });
 
 export default Router;

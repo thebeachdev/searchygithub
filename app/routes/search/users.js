@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model() {
-  //   return this.store.findRecord('user', 'jadex1');
-  // }
+  queryParams:{
+    q: {refreshModel: true},
+  },
+  model(params) {
+    return this.store.query('user', params);
+  }
 });
