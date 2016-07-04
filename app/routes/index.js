@@ -12,14 +12,8 @@ export default Ember.Route.extend({
       console.log('No value Entered.');
       return [];
     } else {
-      console.log('Searching for value');
-      return this.get('store').query('user', params.q);
-    }
-  },
-  actions: {
-    submitSearch() {
-      console.log('submitSearch clicked');
-      this.set('q', this.get('searchValue'));
+        console.log('Searching for value');
+      return this.get('store').findRecord('user', params.q);
     }
   }
 });
