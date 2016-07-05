@@ -5,7 +5,6 @@ export default Ember.Controller.extend({
 
   actions: {
     submitSearch() {
-      console.log('submitSearch clicked');
       this.set('q', this.get('searchValue'));
     }
   }

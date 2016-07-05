@@ -6,13 +6,9 @@ export default Ember.Route.extend({
     q: { refreshModel:true}
   },
   model(params){
-    console.log("value of params: "+JSON.stringify(params));
-    console.log("value of params.q: "+JSON.stringify(params.q));
     if(!params.q) {
-      console.log('No value Entered.');
       return [];
     } else {
-        console.log('Searching for value');
       return this.get('store').findRecord('user', params.q);
     }
   }
