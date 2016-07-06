@@ -1,8 +1,8 @@
 import ApplicationAdapter from './application';
-
+import config from '../config/environment';
 export default ApplicationAdapter.extend({
   headers: {
-    Authorization: "05cb839c1d63c815f3880dbe42f40a74ec020c8b"
+    Authorization: config.githubKey
     // let's call config, and make this a variable that is entered from command-line
   }
   // findRecord(store, type, snapthot){
