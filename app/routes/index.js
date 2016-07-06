@@ -3,7 +3,10 @@ import Ember from 'ember';
 // With promise.
 export default Ember.Route.extend({
   queryParams: {
-    q: { refreshModel:true}
+    q: {
+      refreshModel:true,
+      replace: true
+    }
   },
   model(params){
     if(!params.q) {
