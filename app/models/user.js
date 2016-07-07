@@ -6,6 +6,7 @@ export default Model.extend({
   name: attr('string'),
   login: attr('string'),
   url: attr('string'),
+  avatarUrl: attr('string'),
   email: attr('string'),
   followers: attr('number'),
   bio: attr('string'),
