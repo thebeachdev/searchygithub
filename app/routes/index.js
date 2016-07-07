@@ -9,10 +9,11 @@ export default Ember.Route.extend({
     }
   },
   model(params){
-    if(!params.q) {
-      return [];
-    } else {
+    if(params.q) {
       return this.get('store').findRecord('user', params.q);
+    } else {
+      return [];// return an error. If no params are given say that,
+      // if it's an error 
     }
   }
 });

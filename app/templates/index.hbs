@@ -1,11 +1,12 @@
 {{!-- app/templates/index.hbs --}}
 <!-- create search bar here.  -->
-
-<div class="ui input center aligned grid">
-  <form {{action "submitSearch" on="submit"}}>
-    {{input value=searchValue class="prompt" type="text" placeholder="Enter a User Name"}}
-    <div class="ui primary button" {{action "submitSearch"}}>Search</div>
-  </form>
+<div class="center aligned grid container">
+  <div class="ui search">
+    <div class="ui left icon input">
+      {{input value=searchValue class="prompt center aligned gr" type="text" placeholder="Search GitHub"}}
+      <i class="github icon"></i>
+    </div>
+  </div>
 </div>
 
 {{#if model}}
