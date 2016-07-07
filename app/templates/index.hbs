@@ -3,7 +3,8 @@
 <div class="center aligned grid container">
   <div class="ui search">
     <div class="ui left icon input">
-      {{input value=searchValue class="prompt center aligned gr" type="text" placeholder="Search GitHub"}}
+      {{input value=searchValue  class="prompt center aligned grid" type="text" placeholder="Search GitHub" enter="submitSearch"}}
+
       <i class="github icon"></i>
     </div>
   </div>
@@ -23,6 +24,6 @@
     {{repo-collection repos=model.repositories}}
   </div>
 {{else}}
-  <h1>There is no Model Present</h1>
+  <h1>There is no value present to search for</h1>
   {{!-- load error card here --}}
 {{/if}}
